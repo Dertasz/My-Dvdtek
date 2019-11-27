@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h1> {{ selectedFilm.title }} </h1>
+    </div>
+    <div class="text-center">
+            <img
+                [src]="selectedFilm.imagePath"
+                alt="{{ selectedFilm.title }}"
+                class="img-fluid"
+                style="max-height: 200px">
+    </div>   
+    <div class="col-xs-12">
+            <p> {{ selectedFilm.year }} </p>
+            <p> {{ selectedFilm.description }} </p>
+            <p> {{ selectedFilm.director }} </p>
+            <p> {{ selectedFilm.mainactor }} </p>
+        </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle">
+                Manage Film <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Edit Film</a></li>
+                <li><a href="#">Delete Film</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

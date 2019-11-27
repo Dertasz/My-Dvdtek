@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">Add Film</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" 
+           class="list-group-item clearfix" 
+           *ngFor="let film of films">
+            <div class="pull-left" (click)="onFilmSelected(film.id)">
+                <h4 class="list-group-item-heading">{{ film.title }}</h4>
+                <p class="list-group-item-text">{{ film.year }}</p>
+                <p class="list-group-item-text">{{ film.director }}</p>
+                <p class="list-group-item-text">{{ film.mainactor }}</p>
+            </div>
+            <span class="pull-right">
+                <img
+                    [src]="film.imagePath"
+                    alt="{{ film.title }}"
+                    class="img-responsive"
+                    style="max-height: 50px">
+            </span>
+        </a>
+    </div>
+</div>
